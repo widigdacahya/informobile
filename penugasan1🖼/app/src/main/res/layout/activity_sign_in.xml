@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgf"
+    tools:context=".SignInActivity">
+
+
+    <ImageView
+        android:id="@+id/logoElisia_UI"
+        android:src="@drawable/logoe"
+        android:contentDescription="@string/content_desc"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="120dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
+
+    <TextView
+        android:id="@+id/wb_UI"
+        android:text="@string/welcome_back"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textSize="26sp"
+        app:layout_constraintTop_toBottomOf="@+id/logoElisia_UI"
+        android:fontFamily="@font/poppins_semibold"
+        android:textColor="#fff"
+        android:layout_marginTop="48dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+    android:id="@+id/etEmailSignIn_UI"
+    android:layout_width="match_parent"
+    android:layout_marginHorizontal="30dp"
+    android:autofillHints="email"
+    android:textColorHint="#fff"
+    android:background="@drawable/bgedittext"
+    android:hint="@string/enter_email"
+    android:textSize="14sp"
+    android:drawableStart="@drawable/icemail"
+    android:drawablePadding="16dp"
+    android:layout_height="40dp"
+    android:ems="10"
+    android:layout_marginTop="32dp"
+    android:textColor="#fff"
+    android:inputType="textEmailAddress"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/wb_UI" />
+
+
+    <EditText
+        android:id="@+id/etPassSignIn_UI"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="30dp"
+        android:autofillHints="password"
+        android:textColorHint="#fff"
+        android:background="@drawable/bgedittext"
+        android:hint="@string/enter_password"
+        android:drawableStart="@drawable/icpass"
+        android:drawablePadding="16dp"
+        android:layout_height="40dp"
+        android:textSize="14sp"
+        android:ems="10"
+        android:layout_marginTop="16dp"
+        android:textColor="#fff"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etEmailSignIn_UI" />
+
+
+    <LinearLayout
+        android:id="@+id/linLayoutSingIn"
+        app:layout_constraintTop_toBottomOf="@id/etPassSignIn_UI"
+        android:layout_marginTop="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginHorizontal="30dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:textColor="#fff"
+            android:layout_width="0dp"
+            android:buttonTint="#fff"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:layout_weight="1"
+            android:text="@string/remember_me" />
+
+        <TextView
+            android:id="@+id/forgotPass_UI"
+            android:text="@string/forgot_password"
+            android:textColor="#fff"
+            android:fontFamily="@font/poppins_semibold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btnGoSignIn_UI"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="88dp"
+        android:text="@string/let_s_go"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:background="@drawable/bgmerah"
+        android:fontFamily="@font/poppins_semibold"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="30dp"
+        android:layout_height="50dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
